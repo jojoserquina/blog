@@ -5,8 +5,7 @@
  **/
 component 
 	hint="My vegetable object" 
-	output="false" 
-	persistent="false" {
+	output="false" {
 
 	property name='Name' default="" type="string";
 	property name='Type' default="" type="string";
