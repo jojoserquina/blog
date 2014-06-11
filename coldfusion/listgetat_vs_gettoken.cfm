@@ -44,7 +44,28 @@ try{
 }
 
 
-if( listLen(vegetableBasket) < 7 )
+if( listLen(vegetableBasket) < 6 )
 	writeOutput('Hey! That silly cashier failed to add all the vegetables!');
-	
+
+
+// there are 5 vegetables in our basket
+vegetableBasket = 'Bitter Melon,Eggplant,Pole Beans,Okra,Zucchini';
+
+// do something with them
+writeOutput(getToken(vegetableBasket,1) 
+			& ' is bitter, yet highly nutritious - must try. ');
+writeOutput(getToken(vegetableBasket,2) 
+			& ' is certainly best when grilled, skinned, and added to an omelette. ');
+writeOutput(getToken(vegetableBasket,4) 
+			& ' is great for battered then fried! ');
+
+/**
+ * though the sixth vegetable doesn't exist
+ * the method will not fail
+ **/
+ writeOutput('However, I most definitely dislike ' 
+ 			& getToken(vegetableBasket,6) 
+ 			& '. There isn''t much you can do with it! ');
+
+
 </cfscript>
