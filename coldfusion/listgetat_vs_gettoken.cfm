@@ -1,4 +1,3 @@
-<cfset lbrk = '<br />' />
 <cfscript>
 	// there are 5 vegetables in our basket
 	vegetableBasket = 'Bitter Melon,Eggplant,Pole Beans,Okra,Zucchini';
@@ -8,7 +7,6 @@
 				& ' is bitter, yet highly nutritious - must try. ');
 	writeOutput(listGetAt(vegetableBasket,2) 
 				& ' is certainly best when grilled, skinned, and added to an omelette. ');
-	writeOutput(lbrk & '...' & lbrk);
 	
 	/**
 	 * This is how we'll simulate a failure:
