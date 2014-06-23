@@ -35,4 +35,21 @@
 	 * }
 	 **/
 	writedump( SerializeJSON(stcTest) );
+	
+	
+	/**
+	 * @hint getMeSomething: my supercool remote method tha returns json
+	 **/ 
+	remote any function getMeSomething() returnFormat='JSON' output='false'{
+		
+		// create me a structure
+		var stcTest = {};
+			stcTest.ID = 1;
+			stcTest.recFirstName = 'Janet Doe';
+			stcTest.recStreetAddress = 'The Does Boulevard';
+		
+		// return me a serialized version of it
+		return serializeJSON( stcTest );
+	}
+	
 </cfscript>
