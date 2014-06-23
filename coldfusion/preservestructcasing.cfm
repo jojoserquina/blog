@@ -9,8 +9,12 @@
 	QuerySetCell(testQuery,'Address','Street Named Doe',1);
 
 	/**
-	 * if we were to serialize this query and dump it, the result will be something like
-	 * {"COLUMNS":["RECID","FULLNAME","STREETADDRESS"],"DATA":[[1,"John Doe","Street Named Doe"]]}
+	 * if we were to serialize this query and dump it, 
+	 * the result will be something like
+	 * {
+	 *  "COLUMNS":["RECID","FULLNAME","STREETADDRESS"],
+	 *  "DATA":[[1,"John Doe","Street Named Doe"]]
+	 * }
 	 **/
 	writedump( SerializeJSON(testQuery) );
 
@@ -23,8 +27,12 @@
 	stcTest.recStreetAddress = testQuery.StreetAddress;
 	
 	/**
-	 * if we were to serialize this structure and dump it, the result will be something like
-	 * {"RECSTREETADDRESS":"Street Named Doe","RECID":1,"RECFULLNAME":"John Doe"}
+	 * if we were to serialize this structure and dump it, 
+	 * the result will be something like
+	 * {
+	 *  "RECSTREETADDRESS":"Street Named Doe",
+	 *  "RECID":1,"RECFULLNAME":"John Doe"
+	 * }
 	 **/
 	writedump( SerializeJSON(stcTest) );
 </cfscript>
