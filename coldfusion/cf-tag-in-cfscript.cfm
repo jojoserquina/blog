@@ -27,4 +27,28 @@
     sheetname="Sheet1", 
     overwrite="true" ); 
   
+  /**
+   * cffile and file
+   **/
+  FileWrite('/mydirectory/myfile.txt',theContent);
+  // vs
+  cffile( action="write", file="/mydirectory/myfile.txt", output=theContent );
+  
+  /**
+   * writing it with argument collection
+   **/
+  stcArgs = {};
+  stcArgs.from = "some.name@u.me";
+  stcArgs.to = "to.you@from.me";
+  stcArgs.server = "mystmp.server.yes";
+  stcArgs.username = "test";
+  stcArgs.password = "extreme";
+  stcArgs.subject = "My Tag Script";
+  cfmail( ArgumentCollection = stcArgs ){
+    cfmailParam( name="header", value="myHeadValue" );
+    cfmailParam( file="/mydirectory/myfile.txt", type="text/plain" );
+    writeOutput('Hello, there!');
+  }
+  
+  
 </cfscript>
