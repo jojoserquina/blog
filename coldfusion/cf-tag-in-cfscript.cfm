@@ -16,5 +16,15 @@
    
   /**
    * cfscpreadsheet (for example) has some benefits. 
+   * if you look at the current support for spreadsheet scripts, it is lacking. 
+   * so, one would typically mix cfscripts/tag-based - or create a component that implements
+   * the tag method then call the method within the script. 
+   **/
+  cfspreadsheet( 
+    action="write", 
+    filename="/mydirectory/myfile.xls", 
+    name="MySheet", 
+    sheetname="Sheet1", 
+    overwrite="true" ); 
   
 </cfscript>
