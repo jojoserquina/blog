@@ -16,13 +16,13 @@ component
    * @sc - numeric, the seconds of the date. Default value is 0. Valid values (0-59)
    * @zonename - string. The timezone name associated to thed ate. Default is America/New_York (EST)
    **/ 
-  public any function SUGCreateODBCDatetime( numeric yr=Year(Now())
-					   , numeric mo=Month(Now())-1
-					   , numeric dy=Day(Now())
-					   , numeric hr=0
-					   , numeric mn=0
-					   , numeric sc=0
-					   , string zonename='America/New_York' ){
+  public any function customCreateDateTime( numeric yr=Year(Now())
+					  , numeric mo=Month(Now())-1
+					  , numeric dy=Day(Now())
+					  , numeric hr=0
+					  , numeric mn=0
+					  , numeric sc=0
+					  , string zonename='America/New_York' ){
 	
 	var y = JavaCast("int",Arguments.yr);
 	var m = JavaCast("int",Arguments.mo)-1;
@@ -72,7 +72,7 @@ component
 	var outputFormat = objDF.init( javaCast( "string", "yyyy-MM-dd HH:mm:ss" ) );
 	    outputFormat.setTimeZone(tz);
 	
-	// viola - just format and return the calendar's date/time
+	// voila - just format and return the calendar's date/time
 	return outputFormat.format(cal.getTime());
   
 }
